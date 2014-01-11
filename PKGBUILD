@@ -7,7 +7,9 @@ arch=('any')
 url="https://github.com/muff1nman/wifi-powersave"
 license=('GPL3')
 groups=('powersaver-udev-rules')
+source=('70-wifi-powersave.rules')
+sha256sums=('483eb9e48473a4f30093a6728c2c8316b3b4eed962dbe93af3deb0c7f9ba1d1c')
 
 package() {
-	install -m644 70-wifi-powersave.rules ${pkgdir}/etc/udev/rules.d/70-wifi-powersave.rules
+	install -D -m644 70-wifi-powersave.rules ${pkgdir}/etc/udev/rules.d/70-wifi-powersave.rules
 }
